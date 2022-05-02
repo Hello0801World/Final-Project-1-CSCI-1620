@@ -3,7 +3,14 @@ from classes import *
 
 
 class GUI:
+    """
+    class to create a GUI and have some methods to function buttons
+    """
     def __init__(self,window):
+        """
+        Constructor to create a user interface
+        :param window: window parameter from main class
+        """
         self.window =window
 
         self.channel_val=0
@@ -51,6 +58,9 @@ class GUI:
 
 
     def change_button_state(self):
+        """
+        Function to change a state of buttons based on if CheckButton is marked or not
+        """
         if self.TorF.get():
             self.button_channel_up['state'] = 'active'
             self.button_channel_down['state'] = 'active'
@@ -63,18 +73,30 @@ class GUI:
             self.button_volume_down["state"] = 'disable'
 
     def Cha_up_clicked(self):
+        """
+        Function to call channel_up method when button_channel_up is clicked
+        """
         channel = self.tv.channel_up()
         self.label_num_channel.config(text=f'{channel}')
 
     def Cha_down_clicked(self):
+        """
+        Function to call channel_down method when button_channel_down is clicked
+        """
         channel=self.tv.channel_down()
         self.label_num_channel.config(text=f'{channel}')
 
     def Vol_up_clicked(self):
+        """
+        Function to call volume_up method when button_volume_up is clicked
+        """
         volume=self.tv.volume_up()
         self.label_num_volume.config(text=f'{volume}')
 
     def Vol_down_clicked(self):
+        """
+        Function to call volume_down method when button_volume_down is clicked
+        """
         volume = self.tv.volume_down()
         self.label_num_volume.config(text=f'{volume}')
 
