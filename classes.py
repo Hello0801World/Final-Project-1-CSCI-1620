@@ -2,8 +2,8 @@ class Television:
     """
     Class to represent television object
     """
-    MIN_CHANNEL = 0     # Minimum TV channel
-    MAX_CHANNEL = 5     # Maximum TV channel
+    MIN_CHANNEL = 1     # Minimum TV channel
+    MAX_CHANNEL = 4     # Maximum TV channel
 
     MIN_VOLUME = 0      # Minimum TV volume
     MAX_VOLUME = 5      # Maximum TV volume
